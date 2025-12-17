@@ -34,14 +34,14 @@
 > *Converts crisp inputs into membership grades.*
 
 مثال:
-( $e = 0.5 \Rightarrow \mu_{\mathrm{Positive}}(e)=0.7$ )
+$e = 0.5 \Rightarrow \mu_{\mathrm{Positive}}(e)=0.7$
 
 ---
 
 ### 2. Inference Mechanism & Rules
 
 تطبيق قواعد **IF–THEN**
-وقوة كل قاعدة ( w ) تتحسب باستخدام:
+وقوة كل قاعدة $w$ تتحسب باستخدام:
 
 * **Min**
 * أو **Product**
@@ -179,9 +179,9 @@ $$y = 3x_1 + 2x_2 + 1$$
 ### مثال من المحاضرة (Steam Engine)
 
 1. حساب Membership
-2. حساب ( w_i )
-3. حساب ( y_i )
-4. Weighted Average ➜ ( y_{crisp} )
+2. حساب $w_i$
+3. حساب $y_i$
+4. Weighted Average ➜ $y_{crisp}$
 
 ---
 
@@ -223,7 +223,7 @@ $$\text{IF }\; x_1\;\text{is}\;A_i,\qquad\text{THEN}\;y\;\text{is}\;C_i$$
 * IF الجو حار جداً
 * THEN سرعة المروحة عالية
 
-لو ( w=0.7 )
+لو $w=0.7$
 ➡ سرعة = 80
 ➡ نستخدم Weighted Average
 
@@ -236,7 +236,7 @@ $$\text{IF }\; x_1\;\text{is}\;A_i,\qquad\text{THEN}\;y\;\text{is}\;C_i$$
 | بص على **THEN** الأول   | خلط Mamdani مع TSK     |
 | معادلة = **TSK**        | استخدام COG مع TSK     |
 | مجموعة ضبابية = Mamdani | نسيان Weighted Average |
-| COG فقط مع Mamdani      | نسيان حساب ( w ) صح    |
+| COG فقط مع Mamdani      | نسيان حساب $w$ صح    |
 
 ---
 
