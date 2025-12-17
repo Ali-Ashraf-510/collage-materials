@@ -108,6 +108,8 @@ AMSE = mean(trn_mse);
 - ✅ **AMSE** = Average Mean Square Error over 100 epochs
 - ✅ Lower AMSE indicates **better approximation**
 
+---
+
 ### 7️⃣ Step 7: Plot Results
 
 #### 📈 Training Error Curve
@@ -115,22 +117,33 @@ AMSE = mean(trn_mse);
 ```matlab
 figure;
 plot(1:numEpochs, trn_mse, 'LineWidth', 2);
-xlabel('Epochs'); ylabel('MSE');
+xlabel('Epochs'); 
+ylabel('MSE');
 title('Training Error over Epochs');
 grid on;
 ```
+
+**Purpose:** Visualize how the error decreases during training
+
+---
 
 #### 📊 Desired Output vs ANFIS Output
 
 ```matlab
 figure;
 plot(1:n, y, 'x', 1:n, anfis_output, 'o');
-xlabel('Sample Number'); ylabel('Output');
-legend('Desired Output','ANFIS Output');
-title('Comparison: Desired vs 
+xlabel('Sample Number'); 
+ylabel('Output');
+legend('Desired Output', 'ANFIS Output');
+title('Comparison: Desired vs ANFIS Output');
+grid on;
+```
+
+**Purpose:** Compare the exact function output with ANFIS predictions
 
 ---
-🎯 Optimized ANFIS Parameters | المعاملات المُحسَّنة
+
+## 🎯 Optimized ANFIS Parameters | المعاملات المُحسَّنة
 
 ### 🔸 Premise Parameters
 
