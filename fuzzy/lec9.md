@@ -72,7 +72,7 @@
   *The mutation stage generates a mutant vector by adding the weighted differential of two random vectors to a third base vector.*
 
 - **دور معامل الطفرة (Mutation Factor - F)**:
-  - $F$ هو ثابت يحدده المستخدم ويتراوح بين.
+  - $F$ هو ثابت يحدده المستخدم ويتراوح بين $[0, 2]$.
   - $F$ يتحكم في تضخيم (Amplification) الفرق التفاضلي، وبالتالي يتحكم في **حجم الخطوة** وسرعة التقارب.
   
   *F controls the amplification of the differential variation and affects the convergence speed.*
@@ -85,7 +85,7 @@
   *Crossover combines parameters from the target and mutant vectors to form the trial vector.*
 
 - **آلية التنفيذ**:
-  - يتم استخدام معامل التحكم **Crossover Rate (CR)**، وهو ثابت بين يحدده المستخدم.
+  - يتم استخدام معامل التحكم **Crossover Rate (CR)**، وهو ثابت بين $[0, 1]$ يحدده المستخدم.
   - لكل معامل (Component $j$) في المتجه، يتم عمل مقارنة: لو كان رقم عشوائي (Rand) أقل من أو يساوي CR، يتم أخذ المعامل من **Mutant Vector ($\mathbf{v}_{i,G+1}$)**. وإلا، يتم أخذ المعامل من **Target Vector ($\mathbf{x}_{i,G}$)**.
   - يتم ضمان أن الـ Trial Vector يحصل على الأقل على معامل واحد من الـ Mutant Vector.
   - بعد التهجين، يتم فحص الـ Trial Vector للتأكد من أنه لم يخرج خارج نطاق البحث المحدد في الـ Initialization، وفي حالة الخروج، يتم تعديله ليعود للحدود المسموح بها.
